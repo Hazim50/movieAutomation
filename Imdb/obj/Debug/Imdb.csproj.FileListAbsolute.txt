@@ -1,0 +1,12 @@
+C:\Users\Hazim\source\repos\Imdb\Imdb\bin\Debug\Imdb.exe.config
+C:\Users\Hazim\source\repos\Imdb\Imdb\bin\Debug\Imdb.exe
+C:\Users\Hazim\source\repos\Imdb\Imdb\bin\Debug\Imdb.pdb
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.csproj.AssemblyReference.cache
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.Properties.Resources.resources
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.csproj.GenerateResource.cache
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.csproj.CoreCompileInputs.cache
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.exe
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.pdb
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.GirişSayfasi.resources
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.KayitSayfasi.resources
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.FilmSayfasi.resources
