@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,22 +26,15 @@ namespace Imdb
             {
                 connection.Open();
             }
-            string sorgu = "Select film_adi,yildiz from Filmler";
-            SqlCommand komut = new SqlCommand(sorgu, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-
-            FilmListesi.DataSource = dt;
-            FilmListesi.Columns[0].HeaderText = "Kitap Adı";
-            FilmListesi.Columns[1].HeaderText = "Yıldız";
-
+            
+            
+            fillFilmListesi();
             updateDatas();
-
-            fillStars(1);
-
+            fillYorumListesi();
+            //fillFilmListesi();
         }
 
+        
         void updateDatas()
         {
             string sorgu2 = "select * from Filmler where film_adi=@film_adi";
@@ -48,85 +42,103 @@ namespace Imdb
             komut2.Parameters.AddWithValue("@film_adi", FilmListesi.CurrentRow.Cells[0].Value.ToString());
 
             SqlDataReader reader = komut2.ExecuteReader();
-            //l_filmAdi.Text = "sdfjsdkf";
             if (reader.Read())
             {
                 l_filmAdi.Text = FilmListesi.CurrentRow.Cells[0].Value.ToString();
                 l_tur.Text = reader["tur"].ToString();
-                l_yil.Text = reader["yil"].ToString();
+                l_yil.Text = Convert.ToDateTime(reader["yil"]).Year.ToString();
                 l_basrol.Text = reader["basrol"].ToString();
                 l_yonetmen.Text = reader["yonetmen"].ToString();
-                l_imdbPuani.Text = reader["imdb_puani"].ToString();
+                l_imdbPuani.Text = Math.Round(Convert.ToSingle(reader["imdb_puani"]),2).ToString();
                 l_sure.Text = reader["sure"].ToString();
                 l_dil.Text = reader["dil"].ToString();
-                l_yildiz.Text = reader["yildiz"].ToString();
+                l_yildiz.Text = Convert.ToDouble(reader["yildiz"]).ToString("F2");
             }
 
             //l_yil.Text = reader["yil"].ToString();
             reader.Close();
         }
 
+        void fillFilmListesi()
+        {
+            string sorgu = "Select film_adi,yildiz from Filmler";
+            SqlCommand komut = new SqlCommand(sorgu, connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            FilmListesi.DataSource = dt;
+            FilmListesi.Columns["yildiz"].DefaultCellStyle.Format = "F2";
+
+            FilmListesi.Columns[0].HeaderText = "Film Adı";
+            FilmListesi.Columns[1].HeaderText = "Yıldız";
+        }
+
         private void FilmListesi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             updateDatas();
+            fillYorumListesi();
         }
 
-        int yildizSayisi = 1;
-        void fillStars(int adet)
+        void fillYorumListesi()
         {
-            Dictionary<PictureBox, string> starList = new Dictionary<PictureBox, string>();
-            starList = returnStarList(adet);
+            string sorgu = "select film_id from Filmler where film_adi=@film_adi";
+            SqlCommand komut = new SqlCommand(sorgu, connection);
+            komut.Parameters.AddWithValue("@film_adi", FilmListesi.CurrentRow.Cells[0].Value.ToString());
+            SqlDataReader reader = komut.ExecuteReader();
+            string film_id = "";
 
-            foreach (KeyValuePair<PictureBox, string> kvp in starList)
+            if (reader.Read())
             {
-                PictureBox pictureBox = kvp.Key;
-                string imagePath = kvp.Value;
-                pictureBox.Image = Image.FromFile(imagePath);
+                film_id = reader["film_id"].ToString();
+                reader.Close();
+            }
+
+
+            string sorgu2 = "select yorum_tarihi,yorum_metni from Yorumlar where film_id=@film_id";
+            SqlCommand komut2 = new SqlCommand(sorgu2, connection);
+            komut2.Parameters.AddWithValue("film_id", film_id);
+            SqlDataAdapter adapter = new SqlDataAdapter(komut2);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            YorumListesi.DataSource = dt;
+        }
+        private void b_yorumYap_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["YorumSayfasi"] == null)
+            {
+                YorumSayfasi yorumSayfasi = new YorumSayfasi(FilmListesi.CurrentRow.Cells[0].Value.ToString());
+                yorumSayfasi.FormClosed += (s, args) => this.Show();
+                yorumSayfasi.FormClosed += (s, args) => updateDatas();
+                yorumSayfasi.FormClosed += (s, args) => fillYorumListesi();
+                yorumSayfasi.FormClosed += (s, args) => fillFilmListesi();
+                this.Hide();
+                yorumSayfasi.Show();
+            }
+            else
+            {
+                Application.OpenForms["YorumSayfasi"].Show();
             }
         }
 
-        Dictionary<PictureBox, string> returnStarList(int adet)
+        private void link_cikisYap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PictureBox[] yildizlar = { yildiz1, yildiz2, yildiz3, yildiz4, yildiz5 };
-            Dictionary<PictureBox, string> starList = new Dictionary<PictureBox, string>();
-            for (int i = 1; i<= 5; i++)
+            if (Application.OpenForms["GirisSayfasi"] == null)
             {
-                PictureBox yildiz = yildizlar[i-1];
-                if (i <= adet)
-                {
-                    starList.Add(yildiz, Application.StartupPath + "\\assets\\dolu.png");
-                }
-                else
-                {
-                    starList.Add(yildiz, Application.StartupPath + "\\assets\\bos.png");
-                }
+                GirişSayfasi girişSayfasi = new GirişSayfasi();
+                girişSayfasi.FormClosed += (s, args) => this.Close();
+                this.Hide();
+                girişSayfasi.Show();
             }
-            return starList;
+            else
+            {
+                Application.OpenForms["GirisSayfasi"].Activate();
+            }
         }
 
-        private void yildiz1_MouseClick(object sender, MouseEventArgs e)
+        private void b_izle_Click(object sender, EventArgs e)
         {
-            fillStars(1);
-        }
-
-        private void yildiz2_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillStars(2);
-        }
-
-        private void yildiz3_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillStars(3);
-        }
-
-        private void yildiz4_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillStars(4);
-        }
-
-        private void yildiz5_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillStars(5);
+            MessageBox.Show("Film İzlendi, Yorumlarınızı Bekliyoruz");
         }
     }
 }

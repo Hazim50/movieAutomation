@@ -46,26 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilmEklemeSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmEklemeSayfasi.Designer.cs">
+      <DependentUpon>FilmEklemeSayfasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilmSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FilmSayfasi.Designer.cs">
       <DependentUpon>FilmSayfasi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IMDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IMDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IMDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IMDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IMDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IMDBDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="KayitSayfasi.cs">
       <SubType>Form</SubType>
@@ -81,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YorumSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YorumSayfasi.Designer.cs">
+      <DependentUpon>YorumSayfasi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FilmEklemeSayfasi.resx">
+      <DependentUpon>FilmEklemeSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilmSayfasi.resx">
       <DependentUpon>FilmSayfasi.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,39 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="IMDBDataSet.xsc">
-      <DependentUpon>IMDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="IMDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IMDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IMDBDataSet.xss">
-      <DependentUpon>IMDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="IMDBDataSet1.xsc">
-      <DependentUpon>IMDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="IMDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IMDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IMDBDataSet1.xss">
-      <DependentUpon>IMDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="IMDBDataSet2.xsc">
-      <DependentUpon>IMDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="IMDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IMDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IMDBDataSet2.xss">
-      <DependentUpon>IMDBDataSet2.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="YorumSayfasi.resx">
+      <DependentUpon>YorumSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

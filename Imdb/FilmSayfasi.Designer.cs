@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
-            this.iMDBDataSet = new Imdb.IMDBDataSet();
-            this.filmlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filmlerTableAdapter = new Imdb.IMDBDataSetTableAdapters.FilmlerTableAdapter();
-            this.YorumListesi = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.b_yildizVer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.b_yorumYap = new System.Windows.Forms.Button();
             this.l_dil = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.l_sure = new System.Windows.Forms.Label();
@@ -58,81 +58,27 @@
             this.l_tur = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.b_izle = new System.Windows.Forms.Button();
             this.lblLine = new System.Windows.Forms.Label();
             this.l_filmAdi = new System.Windows.Forms.Label();
-            this.iMDBDataSet1 = new Imdb.IMDBDataSet1();
             this.filmlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmlerTableAdapter1 = new Imdb.IMDBDataSet1TableAdapters.FilmlerTableAdapter();
-            this.iMDBDataSet2 = new Imdb.IMDBDataSet2();
             this.filmlerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.filmlerTableAdapter2 = new Imdb.IMDBDataSet2TableAdapters.FilmlerTableAdapter();
             this.FilmListesi = new System.Windows.Forms.DataGridView();
-            this.yildiz1 = new System.Windows.Forms.PictureBox();
-            this.yildiz2 = new System.Windows.Forms.PictureBox();
-            this.yildiz3 = new System.Windows.Forms.PictureBox();
-            this.yildiz4 = new System.Windows.Forms.PictureBox();
-            this.yildiz5 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YorumListesi)).BeginInit();
+            this.YorumListesi = new System.Windows.Forms.DataGridView();
+            this.link_cikisYap = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FilmListesi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz5)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.YorumListesi)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // b_yildizVer
             // 
-            this.button1.Location = new System.Drawing.Point(688, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // iMDBDataSet
-            // 
-            this.iMDBDataSet.DataSetName = "IMDBDataSet";
-            this.iMDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // filmlerBindingSource
-            // 
-            this.filmlerBindingSource.DataMember = "Filmler";
-            this.filmlerBindingSource.DataSource = this.iMDBDataSet;
-            // 
-            // filmlerTableAdapter
-            // 
-            this.filmlerTableAdapter.ClearBeforeFill = true;
-            // 
-            // YorumListesi
-            // 
-            this.YorumListesi.AllowUserToDeleteRows = false;
-            this.YorumListesi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
-            this.YorumListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.YorumListesi.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.YorumListesi.Location = new System.Drawing.Point(613, 395);
-            this.YorumListesi.Name = "YorumListesi";
-            this.YorumListesi.Size = new System.Drawing.Size(240, 150);
-            this.YorumListesi.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(523, 472);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "yorumlar";
+            this.b_yildizVer.Location = new System.Drawing.Point(0, 0);
+            this.b_yildizVer.Name = "b_yildizVer";
+            this.b_yildizVer.Size = new System.Drawing.Size(75, 23);
+            this.b_yildizVer.TabIndex = 15;
             // 
             // label2
             // 
@@ -146,6 +92,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.link_cikisYap);
+            this.panel1.Controls.Add(this.b_yorumYap);
             this.panel1.Controls.Add(this.l_dil);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.l_sure);
@@ -163,13 +111,24 @@
             this.panel1.Controls.Add(this.l_tur);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.b_izle);
             this.panel1.Controls.Add(this.lblLine);
             this.panel1.Controls.Add(this.l_filmAdi);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(415, 655);
             this.panel1.TabIndex = 5;
+            // 
+            // b_yorumYap
+            // 
+            this.b_yorumYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.b_yorumYap.Location = new System.Drawing.Point(225, 474);
+            this.b_yorumYap.Name = "b_yorumYap";
+            this.b_yorumYap.Size = new System.Drawing.Size(166, 45);
+            this.b_yorumYap.TabIndex = 37;
+            this.b_yorumYap.Text = "Yorum Yap";
+            this.b_yorumYap.UseVisualStyleBackColor = true;
+            this.b_yorumYap.Click += new System.EventHandler(this.b_yorumYap_Click);
             // 
             // l_dil
             // 
@@ -356,15 +315,16 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "label4";
             // 
-            // button2
+            // b_izle
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(112, 472);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 45);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "İzle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.b_izle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.b_izle.Location = new System.Drawing.Point(41, 474);
+            this.b_izle.Name = "b_izle";
+            this.b_izle.Size = new System.Drawing.Size(166, 45);
+            this.b_izle.TabIndex = 12;
+            this.b_izle.Text = "İzle";
+            this.b_izle.UseVisualStyleBackColor = true;
+            this.b_izle.Click += new System.EventHandler(this.b_izle_Click);
             // 
             // lblLine
             // 
@@ -391,177 +351,138 @@
             this.l_filmAdi.TabIndex = 6;
             this.l_filmAdi.Text = "Film Adı";
             // 
-            // iMDBDataSet1
-            // 
-            this.iMDBDataSet1.DataSetName = "IMDBDataSet1";
-            this.iMDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // filmlerBindingSource1
-            // 
-            this.filmlerBindingSource1.DataMember = "Filmler";
-            this.filmlerBindingSource1.DataSource = this.iMDBDataSet1;
-            // 
-            // filmlerTableAdapter1
-            // 
-            this.filmlerTableAdapter1.ClearBeforeFill = true;
-            // 
-            // iMDBDataSet2
-            // 
-            this.iMDBDataSet2.DataSetName = "IMDBDataSet2";
-            this.iMDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // filmlerBindingSource2
-            // 
-            this.filmlerBindingSource2.DataMember = "Filmler";
-            this.filmlerBindingSource2.DataSource = this.iMDBDataSet2;
-            // 
-            // filmlerTableAdapter2
-            // 
-            this.filmlerTableAdapter2.ClearBeforeFill = true;
-            // 
             // FilmListesi
             // 
             this.FilmListesi.AllowUserToAddRows = false;
             this.FilmListesi.AllowUserToDeleteRows = false;
             this.FilmListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FilmListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.FilmListesi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FilmListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.FilmListesi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FilmListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.FilmListesi.ColumnHeadersHeight = 21;
             this.FilmListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.FilmListesi.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FilmListesi.DefaultCellStyle = dataGridViewCellStyle10;
             this.FilmListesi.EnableHeadersVisualStyles = false;
+            this.FilmListesi.GridColor = System.Drawing.Color.White;
             this.FilmListesi.Location = new System.Drawing.Point(497, 44);
             this.FilmListesi.Name = "FilmListesi";
             this.FilmListesi.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FilmListesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FilmListesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.FilmListesi.RowHeadersVisible = false;
             this.FilmListesi.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.FilmListesi.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            this.FilmListesi.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.FilmListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.FilmListesi.Size = new System.Drawing.Size(475, 133);
+            this.FilmListesi.Size = new System.Drawing.Size(475, 206);
             this.FilmListesi.TabIndex = 7;
             this.FilmListesi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmListesi_CellClick);
             // 
-            // yildiz1
+            // YorumListesi
             // 
-            this.yildiz1.Location = new System.Drawing.Point(3, 3);
-            this.yildiz1.Name = "yildiz1";
-            this.yildiz1.Size = new System.Drawing.Size(40, 40);
-            this.yildiz1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.yildiz1.TabIndex = 8;
-            this.yildiz1.TabStop = false;
-            this.yildiz1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yildiz1_MouseClick);
+            this.YorumListesi.AllowUserToAddRows = false;
+            this.YorumListesi.AllowUserToDeleteRows = false;
+            this.YorumListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.YorumListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.YorumListesi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.YorumListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.YorumListesi.ColumnHeadersHeight = 21;
+            this.YorumListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.YorumListesi.DefaultCellStyle = dataGridViewCellStyle14;
+            this.YorumListesi.EnableHeadersVisualStyles = false;
+            this.YorumListesi.GridColor = System.Drawing.Color.White;
+            this.YorumListesi.Location = new System.Drawing.Point(497, 333);
+            this.YorumListesi.Name = "YorumListesi";
+            this.YorumListesi.ReadOnly = true;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(98)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.YorumListesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.YorumListesi.RowHeadersVisible = false;
+            this.YorumListesi.RowHeadersWidth = 10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(91)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            this.YorumListesi.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.YorumListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.YorumListesi.Size = new System.Drawing.Size(475, 212);
+            this.YorumListesi.TabIndex = 14;
             // 
-            // yildiz2
+            // link_cikisYap
             // 
-            this.yildiz2.Location = new System.Drawing.Point(49, 3);
-            this.yildiz2.Name = "yildiz2";
-            this.yildiz2.Size = new System.Drawing.Size(40, 40);
-            this.yildiz2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.yildiz2.TabIndex = 9;
-            this.yildiz2.TabStop = false;
-            this.yildiz2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yildiz2_MouseClick);
-            // 
-            // yildiz3
-            // 
-            this.yildiz3.Location = new System.Drawing.Point(95, 3);
-            this.yildiz3.Name = "yildiz3";
-            this.yildiz3.Size = new System.Drawing.Size(40, 40);
-            this.yildiz3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.yildiz3.TabIndex = 10;
-            this.yildiz3.TabStop = false;
-            this.yildiz3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yildiz3_MouseClick);
-            // 
-            // yildiz4
-            // 
-            this.yildiz4.Location = new System.Drawing.Point(141, 3);
-            this.yildiz4.Name = "yildiz4";
-            this.yildiz4.Size = new System.Drawing.Size(40, 40);
-            this.yildiz4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.yildiz4.TabIndex = 11;
-            this.yildiz4.TabStop = false;
-            this.yildiz4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yildiz4_MouseClick);
-            // 
-            // yildiz5
-            // 
-            this.yildiz5.Location = new System.Drawing.Point(187, 3);
-            this.yildiz5.Name = "yildiz5";
-            this.yildiz5.Size = new System.Drawing.Size(40, 40);
-            this.yildiz5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.yildiz5.TabIndex = 12;
-            this.yildiz5.TabStop = false;
-            this.yildiz5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.yildiz5_MouseClick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.yildiz1);
-            this.flowLayoutPanel1.Controls.Add(this.yildiz2);
-            this.flowLayoutPanel1.Controls.Add(this.yildiz3);
-            this.flowLayoutPanel1.Controls.Add(this.yildiz4);
-            this.flowLayoutPanel1.Controls.Add(this.yildiz5);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(597, 306);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(256, 45);
-            this.flowLayoutPanel1.TabIndex = 13;
+            this.link_cikisYap.AutoSize = true;
+            this.link_cikisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.link_cikisYap.LinkColor = System.Drawing.Color.White;
+            this.link_cikisYap.Location = new System.Drawing.Point(37, 574);
+            this.link_cikisYap.Name = "link_cikisYap";
+            this.link_cikisYap.Size = new System.Drawing.Size(75, 20);
+            this.link_cikisYap.TabIndex = 43;
+            this.link_cikisYap.TabStop = true;
+            this.link_cikisYap.Text = "Çıkış Yap";
+            this.link_cikisYap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_cikisYap_LinkClicked);
             // 
             // FilmSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1056, 603);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.YorumListesi);
             this.Controls.Add(this.FilmListesi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.YorumListesi);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.b_yildizVer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FilmSayfasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Film";
             this.Load += new System.EventHandler(this.FilmSayfasi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YorumListesi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iMDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmlerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FilmListesi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yildiz5)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.YorumListesi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,17 +490,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private IMDBDataSet iMDBDataSet;
-        private System.Windows.Forms.BindingSource filmlerBindingSource;
-        private IMDBDataSetTableAdapters.FilmlerTableAdapter filmlerTableAdapter;
-        private System.Windows.Forms.DataGridView YorumListesi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button b_yildizVer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button b_izle;
         private System.Windows.Forms.Label lblLine;
         private System.Windows.Forms.Label l_filmAdi;
         private System.Windows.Forms.Label l_imdbPuani;
@@ -597,18 +513,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label l_yildiz;
         private System.Windows.Forms.Label label15;
-        private IMDBDataSet1 iMDBDataSet1;
         private System.Windows.Forms.BindingSource filmlerBindingSource1;
-        private IMDBDataSet1TableAdapters.FilmlerTableAdapter filmlerTableAdapter1;
-        private IMDBDataSet2 iMDBDataSet2;
         private System.Windows.Forms.BindingSource filmlerBindingSource2;
-        private IMDBDataSet2TableAdapters.FilmlerTableAdapter filmlerTableAdapter2;
         private System.Windows.Forms.DataGridView FilmListesi;
-        private System.Windows.Forms.PictureBox yildiz1;
-        private System.Windows.Forms.PictureBox yildiz2;
-        private System.Windows.Forms.PictureBox yildiz3;
-        private System.Windows.Forms.PictureBox yildiz4;
-        private System.Windows.Forms.PictureBox yildiz5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridView YorumListesi;
+        private System.Windows.Forms.Button b_yorumYap;
+        private System.Windows.Forms.LinkLabel link_cikisYap;
     }
 }

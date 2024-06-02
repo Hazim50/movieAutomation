@@ -12,7 +12,8 @@ yil datetime not null,
 imdb_puani float not null,
 yildiz float,
 sure int,
-dil nvarchar(30))
+dil nvarchar(30),
+yildiz_sayisi int)
 
 create table Kullanicilar(
 kullanici_id int primary key identity(1,1) not null,
@@ -28,7 +29,6 @@ create table Yorumlar(
 yorum_id int primary key identity(1,1) not null,
 kullanici_adi nvarchar(30),
 film_id int not null,
-yildiz_sayisi int,
 yorum_tarihi datetime not null,
 yorum_metni nvarchar(250) not null)
 

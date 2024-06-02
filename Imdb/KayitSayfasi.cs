@@ -21,7 +21,18 @@ namespace Imdb
         SqlConnection connection = new SqlConnection(conn_string);
         private void link_girisYap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            if (Application.OpenForms["GirişSayfasi"] == null)
+            {
+                GirişSayfasi girişSayfasi = new GirişSayfasi();
+                girişSayfasi.FormClosed += (s, args) => this.Close();
+                this.Hide();
+                girişSayfasi.Show();
+            }
+            else
+            {
+                this.Hide();
+                Application.OpenForms["GirişSayfasi"].Show();
+            }
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -39,9 +50,10 @@ namespace Imdb
                 connection.Open();
             }
 
-            string kontrolSorgu = "select count(*) from Kullanicilar where mail = @mail";
+            string kontrolSorgu = "select count(*) from Kullanicilar where mail = @mail or kullanici_adi = @kullanici_adi";
             SqlCommand kontrolKomut = new SqlCommand(kontrolSorgu, connection);
             kontrolKomut.Parameters.AddWithValue("@mail",mail);
+            kontrolKomut.Parameters.AddWithValue("@kullanici_adi",tx_kAdi.Text);
 
             int flag = (int)kontrolKomut.ExecuteScalar();
 
@@ -60,11 +72,22 @@ namespace Imdb
                 sqlCommand.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Basariyla Kayıt Oldunuz");
-                this.Close();
+
+                if (Application.OpenForms["GirisSayfasi"] == null)
+                {
+                    GirişSayfasi girişSayfasi = new GirişSayfasi();
+                    girişSayfasi.FormClosed += (s, args) => this.Close();
+                    this.Hide();
+                    girişSayfasi.Show();
+                }
+                else
+                {
+                    Application.OpenForms["GirisSayfasi"].Activate();
+                }
             }
             else
             {
-                MessageBox.Show("Bu mail sistemde kayıtlı!");
+                MessageBox.Show("Bu mail veya kullanıcı adı sistemde kayıtlı!");
             }
         }
     }

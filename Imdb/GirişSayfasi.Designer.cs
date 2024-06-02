@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirişSayfasi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.link_filmEkle = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.tx_Sifre = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.link_filmEkle);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tx_Sifre);
@@ -58,6 +60,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(415, 599);
             this.panel1.TabIndex = 0;
+            // 
+            // link_filmEkle
+            // 
+            this.link_filmEkle.AutoSize = true;
+            this.link_filmEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.link_filmEkle.LinkColor = System.Drawing.Color.White;
+            this.link_filmEkle.Location = new System.Drawing.Point(323, 573);
+            this.link_filmEkle.Name = "link_filmEkle";
+            this.link_filmEkle.Size = new System.Drawing.Size(73, 20);
+            this.link_filmEkle.TabIndex = 14;
+            this.link_filmEkle.TabStop = true;
+            this.link_filmEkle.Text = "Film Ekle";
+            this.link_filmEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_filmEkle_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -75,7 +90,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(159, 360);
+            this.button1.Location = new System.Drawing.Point(134, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 45);
             this.button1.TabIndex = 12;
@@ -156,11 +171,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1056, 603);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GirişSayfasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Yap";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -181,6 +197,7 @@
         private System.Windows.Forms.TextBox tx_Sifre;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel link_filmEkle;
     }
 }
 

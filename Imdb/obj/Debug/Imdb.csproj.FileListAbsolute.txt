@@ -10,3 +10,5 @@ C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.pdb
 C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.GirişSayfasi.resources
 C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.KayitSayfasi.resources
 C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.FilmSayfasi.resources
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.YorumSayfasi.resources
+C:\Users\Hazim\source\repos\Imdb\Imdb\obj\Debug\Imdb.FilmEklemeSayfasi.resources

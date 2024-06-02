@@ -26,22 +26,26 @@ namespace Imdb
             if (Application.OpenForms["KayitSayfasi"] == null)
             {
                 KayitSayfasi kayitSayfasi = new KayitSayfasi();
-                kayitSayfasi.FormClosed += (s, args) => this.Show();
+                kayitSayfasi.FormClosed += (s, args) => this.Close();
                 this.Hide();
                 kayitSayfasi.Show();
             }
             else
             {
-                Application.OpenForms["KayitSayfasi"].Activate();
+                this.Hide();
+                Application.OpenForms["KayitSayfasi"].Show();
             }
         }
 
+        public static string Username { get; private set; }
         private void button1_Click(object sender, EventArgs e)
         {
             if (connection.State != ConnectionState.Open)
             {
                 connection.Open();
             }
+
+            Username = tx_kAdi.Text;
 
             string kontrolSorgu = "select count(*) from Kullanicilar where kullanici_adi = @kullanici_adi and sifre = @sifre";
             SqlCommand kontrolKomut = new SqlCommand(kontrolSorgu, connection);
@@ -55,18 +59,34 @@ namespace Imdb
                 if (Application.OpenForms["FilmSayfasi"] == null)
                 {
                     FilmSayfasi filmSayfasi = new FilmSayfasi();
-                    filmSayfasi.FormClosed += (s, args) => this.Show();
+                    filmSayfasi.FormClosed += (s, args) => this.Close();
                     this.Hide();
                     filmSayfasi.Show();
                 }
                 else
                 {
-                    Application.OpenForms["KayitSayfasi"].Activate();
+                    this.Hide();
+                    Application.OpenForms["FilmSayfasi"].Show();
                 }
             }
             else
             {
                 MessageBox.Show("Kullanıcı Bulunamadı!");
+            }
+        }
+
+        private void link_filmEkle_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Application.OpenForms["FilmEklemeSayfasi"] == null)
+            {
+                FilmEklemeSayfasi filmEklemeSayfasi = new FilmEklemeSayfasi();
+                filmEklemeSayfasi.FormClosed += (s, args) => this.Close();
+                this.Hide();
+                filmEklemeSayfasi.Show();
+            }
+            else
+            {
+                Application.OpenForms["FilmEklemeSayfasi"].Show();
             }
         }
     }
