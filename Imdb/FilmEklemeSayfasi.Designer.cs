@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLine = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.link_geriDon = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +52,7 @@
             this.tx_dil = new System.Windows.Forms.TextBox();
             this.tx_sure = new System.Windows.Forms.TextBox();
             this.dtp_yil = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblLine = new System.Windows.Forms.Label();
-            this.lblLogin = new System.Windows.Forms.Label();
+            this.b_filmEkle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(415, 655);
             this.panel1.TabIndex = 7;
+            // 
+            // lblLine
+            // 
+            this.lblLine.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.lblLine.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.lblLine.Location = new System.Drawing.Point(44, 299);
+            this.lblLine.Name = "lblLine";
+            this.lblLine.Size = new System.Drawing.Size(350, 1);
+            this.lblLine.TabIndex = 44;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.lblLogin.Location = new System.Drawing.Point(44, 259);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(189, 25);
+            this.lblLogin.TabIndex = 43;
+            this.lblLogin.Text = "YENİ FİLM EKLE";
             // 
             // link_geriDon
             // 
@@ -295,40 +319,16 @@
             this.dtp_yil.Size = new System.Drawing.Size(200, 20);
             this.dtp_yil.TabIndex = 68;
             // 
-            // button1
+            // b_filmEkle
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(616, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 45);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Film Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblLine
-            // 
-            this.lblLine.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.lblLine.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.lblLine.Location = new System.Drawing.Point(44, 299);
-            this.lblLine.Name = "lblLine";
-            this.lblLine.Size = new System.Drawing.Size(350, 1);
-            this.lblLine.TabIndex = 44;
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.lblLogin.Location = new System.Drawing.Point(44, 259);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(189, 25);
-            this.lblLogin.TabIndex = 43;
-            this.lblLogin.Text = "YENİ FİLM EKLE";
+            this.b_filmEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.b_filmEkle.Location = new System.Drawing.Point(616, 525);
+            this.b_filmEkle.Name = "b_filmEkle";
+            this.b_filmEkle.Size = new System.Drawing.Size(237, 45);
+            this.b_filmEkle.TabIndex = 69;
+            this.b_filmEkle.Text = "Film Ekle";
+            this.b_filmEkle.UseVisualStyleBackColor = true;
+            this.b_filmEkle.Click += new System.EventHandler(this.b_filmEkle_Click);
             // 
             // FilmEklemeSayfasi
             // 
@@ -336,7 +336,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(54)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1056, 603);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.b_filmEkle);
             this.Controls.Add(this.dtp_yil);
             this.Controls.Add(this.tx_yildizSayisi);
             this.Controls.Add(this.tx_dil);
@@ -392,7 +392,7 @@
         private System.Windows.Forms.TextBox tx_dil;
         private System.Windows.Forms.TextBox tx_sure;
         private System.Windows.Forms.DateTimePicker dtp_yil;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button b_filmEkle;
         private System.Windows.Forms.Label lblLine;
         private System.Windows.Forms.Label lblLogin;
     }

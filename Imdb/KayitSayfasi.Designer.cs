@@ -38,7 +38,7 @@
             this.tx_soyad = new System.Windows.Forms.TextBox();
             this.tx_ad = new System.Windows.Forms.TextBox();
             this.link_girisYap = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.b_kayitOl = new System.Windows.Forms.Button();
             this.tx_mail = new System.Windows.Forms.TextBox();
             this.lblLine = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.tx_soyad);
             this.panel1.Controls.Add(this.tx_ad);
             this.panel1.Controls.Add(this.link_girisYap);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.b_kayitOl);
             this.panel1.Controls.Add(this.tx_mail);
             this.panel1.Controls.Add(this.lblLine);
             this.panel1.Controls.Add(this.lblLogin);
@@ -156,16 +156,16 @@
             this.link_girisYap.Text = "Giriş Yap";
             this.link_girisYap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_girisYap_LinkClicked);
             // 
-            // button1
+            // b_kayitOl
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(112, 472);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Kayıt Ol";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.b_kayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.b_kayitOl.Location = new System.Drawing.Point(112, 472);
+            this.b_kayitOl.Name = "b_kayitOl";
+            this.b_kayitOl.Size = new System.Drawing.Size(166, 45);
+            this.b_kayitOl.TabIndex = 12;
+            this.b_kayitOl.Text = "Kayıt Ol";
+            this.b_kayitOl.UseVisualStyleBackColor = true;
+            this.b_kayitOl.Click += new System.EventHandler(this.b_kayitOl_Click);
             // 
             // tx_mail
             // 
@@ -223,7 +223,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel link_girisYap;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button b_kayitOl;
         private System.Windows.Forms.TextBox tx_mail;
         private System.Windows.Forms.Label lblLine;
         private System.Windows.Forms.Label lblLogin;

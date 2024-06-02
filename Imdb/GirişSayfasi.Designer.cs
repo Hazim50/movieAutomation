@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirişSayfasi));
             this.panel1 = new System.Windows.Forms.Panel();
             this.link_filmEkle = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.link_kayitOl = new System.Windows.Forms.LinkLabel();
+            this.b_girisYap = new System.Windows.Forms.Button();
             this.tx_Sifre = new System.Windows.Forms.TextBox();
             this.tx_kAdi = new System.Windows.Forms.TextBox();
             this.picboxPassword = new System.Windows.Forms.PictureBox();
@@ -48,8 +48,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.link_filmEkle);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.link_kayitOl);
+            this.panel1.Controls.Add(this.b_girisYap);
             this.panel1.Controls.Add(this.tx_Sifre);
             this.panel1.Controls.Add(this.tx_kAdi);
             this.panel1.Controls.Add(this.picboxPassword);
@@ -74,29 +74,29 @@
             this.link_filmEkle.Text = "Film Ekle";
             this.link_filmEkle.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_filmEkle_LinkClicked);
             // 
-            // linkLabel1
+            // link_kayitOl
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(36, 573);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(62, 20);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Kayıt Ol";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.link_kayitOl.AutoSize = true;
+            this.link_kayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.link_kayitOl.LinkColor = System.Drawing.Color.White;
+            this.link_kayitOl.Location = new System.Drawing.Point(36, 573);
+            this.link_kayitOl.Name = "link_kayitOl";
+            this.link_kayitOl.Size = new System.Drawing.Size(62, 20);
+            this.link_kayitOl.TabIndex = 13;
+            this.link_kayitOl.TabStop = true;
+            this.link_kayitOl.Text = "Kayıt Ol";
+            this.link_kayitOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_kayitOl_LinkClicked);
             // 
-            // button1
+            // b_girisYap
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(134, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Giriş Yap";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.b_girisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.b_girisYap.Location = new System.Drawing.Point(134, 362);
+            this.b_girisYap.Name = "b_girisYap";
+            this.b_girisYap.Size = new System.Drawing.Size(166, 45);
+            this.b_girisYap.TabIndex = 12;
+            this.b_girisYap.Text = "Giriş Yap";
+            this.b_girisYap.UseVisualStyleBackColor = true;
+            this.b_girisYap.Click += new System.EventHandler(this.b_girisYap_Click);
             // 
             // tx_Sifre
             // 
@@ -195,8 +195,8 @@
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox tx_kAdi;
         private System.Windows.Forms.TextBox tx_Sifre;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button b_girisYap;
+        private System.Windows.Forms.LinkLabel link_kayitOl;
         private System.Windows.Forms.LinkLabel link_filmEkle;
     }
 }

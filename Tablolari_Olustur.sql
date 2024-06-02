@@ -1,4 +1,4 @@
---create table IMDB
+--create database IMDB
 
 use IMDB
 

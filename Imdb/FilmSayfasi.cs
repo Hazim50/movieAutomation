@@ -26,8 +26,8 @@ namespace Imdb
             {
                 connection.Open();
             }
-            
-            
+
+            l_kAdi.Text = GirişSayfasi.AdSoyad; // sol üstte ad soyad gözükmesi için giriş sayfasındaki static değişkeni kullanıyoruz
             fillFilmListesi();
             updateDatas();
             fillYorumListesi();
@@ -55,7 +55,6 @@ namespace Imdb
                 l_yildiz.Text = Convert.ToDouble(reader["yildiz"]).ToString("F2");
             }
 
-            //l_yil.Text = reader["yil"].ToString();
             reader.Close();
         }
 

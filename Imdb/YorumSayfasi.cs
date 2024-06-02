@@ -32,31 +32,31 @@ namespace Imdb
             {
                 connection.Open();
             }
-            fillStars(1);
+            fillStars(1); //sayfa açılırken default olarak 1 yıldız seçili olsun
         }
 
-        int yildizSayisi = 1;
-        void fillStars(int adet)
+        int yildizSayisi = 1; //güncel yıldız puanını hesaplarken kullanılıyor
+        void fillStars(int adet) // parametre olarak gelen yıldız sayısı kadar yıldızı doldursun
         {
             Dictionary<PictureBox, string> starList = new Dictionary<PictureBox, string>();
-            starList = returnStarList(adet);
+            starList = returnStarList(adet); // yıldızların boş veya dolu olduğunun görselini ve yolunu bu fonksiyon dönderiyor
 
-            foreach (KeyValuePair<PictureBox, string> kvp in starList)
+            foreach (KeyValuePair<PictureBox, string> kvp in starList) //her bir yıldız görseli için döngü oluşturuluyor ve mevcut görsel yoluna göre yıldızların resminin dolu veya boş olduğu ayarlanıyor
             {
-                PictureBox pictureBox = kvp.Key;
-                string imagePath = kvp.Value;
-                pictureBox.Image = Image.FromFile(imagePath);
+                PictureBox pictureBox = kvp.Key; //key, hangi yıldız olduğu 
+                string imagePath = kvp.Value; // value, bu yıldızın görselinin yolu
+                pictureBox.Image = Image.FromFile(imagePath); //görsel yükle
             }
         }
 
-        Dictionary<PictureBox, string> returnStarList(int adet)
+        Dictionary<PictureBox, string> returnStarList(int adet) //yıldızların görselinin belirlendiği fonksiyon
         {
             PictureBox[] yildizlar = { yildiz1, yildiz2, yildiz3, yildiz4, yildiz5 };
             Dictionary<PictureBox, string> starList = new Dictionary<PictureBox, string>();
             for (int i = 1; i <= 5; i++)
             {
                 PictureBox yildiz = yildizlar[i - 1];
-                if (i <= adet)
+                if (i <= adet) //yildizSayisi değişkeninden küçük eşit olanlar dolu yıldız, diğerleri boş yıldız olacak
                 {
                     starList.Add(yildiz, Application.StartupPath + "\\assets\\dolu.png");
                     yildizSayisi = i;
@@ -69,6 +69,7 @@ namespace Imdb
             return starList;
         }
 
+        //yıldızlara tıklandığında kendi sayısına göre yıldızların görsellerini ayarlıyor
         private void yildiz1_MouseClick_1(object sender, MouseEventArgs e)
         {
             fillStars(1);
@@ -94,28 +95,28 @@ namespace Imdb
             fillStars(5);
         }
 
-        private void yildizVer()
+        private void yildizVer() //yıldızların veritabanıyla bağlantısının yapıldığı fonksiyon
         {
-            string sorgu = "select yildiz,yildiz_sayisi from Filmler where film_adi=@film_adi";
+            string sorgu = "select yildiz,yildiz_sayisi from Filmler where film_adi=@film_adi"; //yıldız sayısını ve yıldız puanını veritabanından çekiyor
             SqlCommand komut = new SqlCommand(sorgu, connection);
-            komut.Parameters.AddWithValue("@film_adi", film_adi); //labeldan alacak
+            komut.Parameters.AddWithValue("@film_adi", film_adi);
             SqlDataReader reader = komut.ExecuteReader();
 
 
-            if (reader.Read())
+            if (reader.Read()) // eğer başarılı ise
             {
                 double mevcutYildiz = Convert.ToDouble(reader["yildiz"]);
                 int mevcutYildizSayisi = Convert.ToInt32(reader["yildiz_sayisi"]);
 
                 int yeniYildizSayisi = mevcutYildizSayisi + 1;
-                double yeniYildiz = ((mevcutYildiz * mevcutYildizSayisi) + yildizSayisi) / yeniYildizSayisi;
+                double yeniYildiz = ((mevcutYildiz * mevcutYildizSayisi) + yildizSayisi) / yeniYildizSayisi; //burada mevcut yıldız puanı ve toplam kaç kez yıldız verildiği kullanılarak yeni yıldız puanı hesaplanıyor 
 
-                string updateQuery = "UPDATE Filmler SET yildiz = @yeniYildiz, yildiz_sayisi = @yeniYildizSayisi WHERE film_adi=@film_adi";
+                string updateQuery = "UPDATE Filmler SET yildiz = @yeniYildiz, yildiz_sayisi = @yeniYildizSayisi WHERE film_adi=@film_adi"; // veritabanını güncelle
                 using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                 {
                     updateCommand.Parameters.AddWithValue("@yeniYildiz", Math.Round(yeniYildiz, 2));
                     updateCommand.Parameters.AddWithValue("@yeniYildizSayisi", yeniYildizSayisi);
-                    updateCommand.Parameters.AddWithValue("@film_adi", film_adi); //labeldan alacak
+                    updateCommand.Parameters.AddWithValue("@film_adi", film_adi);
                     reader.Close();
                     updateCommand.ExecuteNonQuery();
                 }
@@ -129,7 +130,7 @@ namespace Imdb
             {
                 string filmId = "";
 
-                string sorgu = "SELECT film_id FROM Filmler WHERE film_adi = @film_adi";
+                string sorgu = "SELECT film_id FROM Filmler WHERE film_adi = @film_adi"; //adını biliyoruz, bu bilgiyi kullanarak film_id değerini veritabanından alıyoruz
                 using (SqlCommand komut = new SqlCommand(sorgu, connection))
                 {
                     komut.Parameters.AddWithValue("@film_adi", film_adi);
@@ -145,12 +146,12 @@ namespace Imdb
 
                 DateTime dateTime = DateTime.Now;
 
-                string sorgu2 = "insert into Yorumlar (kullanici_adi, film_id, yorum_tarihi, yorum_metni) " +
+                string sorgu2 = "insert into Yorumlar (kullanici_adi, film_id, yorum_tarihi, yorum_metni) " + //yeni yorumu veritabanına eklemek için olan sorgu
                         "values (@kullanici_adi, @film_id, @yorum_tarihi, @yorum_metni)";
 
                 using (SqlCommand komut2 = new SqlCommand(sorgu2, connection))
                 {
-                    komut2.Parameters.AddWithValue("@kullanici_adi", GirişSayfasi.Username);
+                    komut2.Parameters.AddWithValue("@kullanici_adi", GirişSayfasi.Username); // Giriş sayfasında tanımlanan static Username değişkeni burada kullanılıyor
                     komut2.Parameters.AddWithValue("@film_id", filmId);
                     komut2.Parameters.AddWithValue("@yorum_tarihi", dateTime);
                     komut2.Parameters.AddWithValue("@yorum_metni", YorumKutusu.Text);
@@ -160,28 +161,15 @@ namespace Imdb
             }
         }
 
-        private void b_yorumYap_Click(object sender, EventArgs e)
+        private void b_yorumYap_Click(object sender, EventArgs e) //yorum yap butonuna tıklayınca yapılacak işlemler
         {
             yildizVer();
             yorumYap();
             MessageBox.Show("Basariyla Yorum Yapıldı ve Yıldız Verildi");
-
-            //if (Application.OpenForms["FilmSayfasi"] == null)
-            //{
-            //    FilmSayfasi filmSayfasi = new FilmSayfasi();
-            //    filmSayfasi.FormClosed += (s, args) => this.Close();
-            //    this.Hide();
-            //    filmSayfasi.Show();
-            //}
-            //else
-            //{
-            //    this.Hide();
-            //    Application.OpenForms["FilmSayfasi"].Show();
-            //}
             this.Close();
         }
 
-        private void link_geriDon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void link_geriDon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) //geri dön yazısına basılınca sayfayı hemen kapat
         {
             this.Close();
         }
