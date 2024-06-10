@@ -1,4 +1,5 @@
-<img style="width:800px" src="./Imdb/moviePage.png">
+<h2>This movie application has developed by Hazim GÖZKAYA </h2>
 <br>
 ---
-<h2>This movie application has developed by Hazim GÖZKAYA </h2>
+<br>
+<img style="width:800px" src="./Imdb/moviePage.png">
